@@ -10,17 +10,17 @@ A drop-in board for the ErgoDox EZ keyboard, using a Nice!Nano V2 running [ZMK](
 
 ## PCB
 
-The PCB is reversible, which means you can use the same PCB for both half of the keyboard.
+The PCB is reversible, which means you can use the same PCB for both halves of the keyboard.
 
 ![PCB](./images/PCB.png)
 
 ## Material
 
-Here are the components I used to build the keyboard. Except the jack connector and the keyboard itself, everything comes from AliExpress.
+Here are the components I used to build the keyboard. Except for the jack connector and the keyboard itself, everything comes from AliExpress.
 
-### keyboard
+### Keyboard
 
-- [ErgoDox EZ](https://ergodox-ez.com/) only tested on PCB revision B. If you have a different revision, you might need to adapt the PCB to fit your case.
+- [ErgoDox EZ](https://ergodox-ez.com/), only tested on PCB revision B. If you have a different revision, you might need to adapt the PCB to fit your case.
 - [Nice!Nano V2.0 board](https://ja.aliexpress.com/item/1005009890279520.html)
 - 2 x [502030 3.7V 250mAh battery](https://ja.aliexpress.com/item/1005008164278041.html)
 - Power switch [K060c-High head 6pin](https://ja.aliexpress.com/item/1005009691388897.html)
@@ -31,7 +31,7 @@ Here are the components I used to build the keyboard. Except the jack connector 
 
 ### Cable
 
-You will need an USB-Jack cable to recharge and flash your keyboard. The pinout is as follows:
+You will need a USB-Jack cable to recharge and flash your keyboard without opening the case. The pinout is as follows:
 
 | Jack   | USB  |
 | ------ | ---- |
