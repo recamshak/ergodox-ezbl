@@ -1,0 +1,46 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download firmware artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Package firmware
+        run: |
+          mkdir -p release
+          # The reusable workflow uploads a single "firmware" artifact containing
+          # all .uf2 files. Zip it up plus expose the raw files as assets.
+          if [ -d artifacts/firmware ]; then
+            cp artifacts/firmware/*.uf2 release/ 2>/dev/null || true
+            (cd artifacts/firmware && zip -r "../../release/ergodox-ezbl-${GITHUB_REF_NAME}-firmware.zip" .)
+          else
+            # Fallback: bundle whatever artifacts were produced.
+            for dir in artifacts/*/; do
+              name=$(basename "$dir")
+              (cd "$dir" && zip -r "../../release/${name}.zip" .)
+            done
+          fi
+          ls -la release/
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: ${{ github.ref_name }}
+          generate_release_notes: true
+          files: release/*
