@@ -1,4 +1,4 @@
-name: zmk-keyboard-ergodox-exbl
+name: zmk-keyboard-ergodox-ezbl
 build:
   settings:
     board_root: .
