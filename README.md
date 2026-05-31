@@ -14,7 +14,7 @@ The PCB is reversible, which means you can use the same PCB for both halves of t
 
 ![PCB](./images/PCB.png)
 
-Here is the left half once assembled:
+Below is the left half once assembled. I ordered the PCB from [JLCPCB](https://jlcpcb.com/) using [these gerber files](./kicad/gerber).
 
 ![Left half bottom](./images/left-half-bottom.jpg)
 ![Left half top](./images/left-half-top.jpg)
@@ -59,3 +59,7 @@ I used these components (make sure you order the 4 pole ones):
 
 - [3.5mm Jack Connector DIY 4 Poles](https://ja.aliexpress.com/item/1005005570281912.html)
 - [USB cable](https://ja.aliexpress.com/item/1005005292500613.html)
+
+## Firmware
+
+Download and flash the firmware for each half from the [releases page](https://github.com/recamshak/ergodox-ezbl/releases).
