@@ -14,6 +14,11 @@ The PCB is reversible, which means you can use the same PCB for both halves of t
 
 ![PCB](./images/PCB.png)
 
+Here is the left half once assembled:
+
+![Left half bottom](./images/left-half-bottom.jpg)
+![Left half top](./images/left-half-top.jpg)
+
 ## Material
 
 Here are the components I used to build the keyboard. Except for the jack connector and the keyboard itself, everything comes from AliExpress.
